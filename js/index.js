@@ -17,11 +17,15 @@ const parseText = (text, delimiter = ",") => {
     const list = rows.map((i) => {
         const values = i.split(delimiter);
         const el = headers.reduce((object, header, index) => {
-            if(values[index].includes("\r")){
+            try{
                 values[index] = values[index].replace("\r", "");
+                object[header] = values[index];
+                return object;
+            }catch(e){
+                console.log("error: " + object[header] + " / " + values[index]);
+                return null;
             }
-            object[header] = values[index];
-            return object;
+            
         }, {});
         return el;
     });
