@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto SI</title>
+
+    <script src="services/chart_service.js"></script>
+    <script src="services/data_service.js"></script>
+    <script src="handle_data.js"></script>
+</head>
+<body>
+    <!-- Recebendo o Arquivo -->
+    <input type="file"  name="myInput" id="myInput" accept=".xlsx">
+    <input type="submit" onclick="upload()" value="Enviar">
+    
+    <!-- Dependências -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+    <script type="text/javascript" src="process_data.js"></script>
+</body>
+</html>
